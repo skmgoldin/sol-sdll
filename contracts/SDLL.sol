@@ -10,7 +10,7 @@ library SDLL {
 
   struct Data {
     AttributeStore.Data store;
-		DLL.Data dll;
+    DLL.Data dll;
 
     string sortAttr;
   }
@@ -39,7 +39,7 @@ library SDLL {
   @dev Removes a node from a dll. Does not delete any associated data from the store.
   @param _node the node to remove from the list
   */
-	function remove(Data storage _self, uint _node) public {
+  function remove(Data storage _self, uint _node) public {
     _self.dll.remove(_node);
   }
 
