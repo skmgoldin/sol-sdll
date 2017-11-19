@@ -47,8 +47,8 @@ library SDLL {
 
   function validatePosition(Data storage _self, uint _sortAttrVal, uint _prev, uint _next)
   public view returns (bool valid) {
-    uint prevSortAttrVal = _self.store.getAttribute(keccak256(_prev), _self.sortAttr);
-    uint nextSortAttrVal = _self.store.getAttribute(keccak256(_next), _self.sortAttr);
+    uint prevSortAttrVal = getAttr(_self, _prev, _self.sortAttr);
+    uint nextSortAttrVal = getAttr(_self, _next, _self.sortAttr);
 
     if ((prevSortAttrVal <= _sortAttrVal) && ((_sortAttrVal <= nextSortAttrVal) || _next == 0)) {
         return true;
