@@ -1,0 +1,24 @@
+{
+  "name": "sol-sdll",
+  "version": "1.0.0",
+  "description": "Automatically sorted, circular and doubly linked list",
+  "scripts": {
+    "compile": "truffle install && truffle compile",
+    "deploy-rinkeby": "truffle migrate --network rinkeby",
+    "test": "truffle test",
+    "fix": "eslint --fix",
+    "lint": "eslint",
+    "publish": "truffle publish"
+  },
+  "author": "Mike Goldin <mike.goldin@consensys.net>",
+  "license": "ISC",
+  "dependencies": {
+    "truffle": "4.0.1",
+    "truffle-hdwallet-provider": "0.0.3"
+  },
+  "devDependencies": {
+    "eslint": "4.4.1",
+    "eslint-config-airbnb-base": "11.3.1",
+    "eslint-plugin-import": "2.7.0"
+  }
+}

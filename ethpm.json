@@ -1,0 +1,17 @@
+{
+  "package_name": "sdll",
+  "version": "1.0.0",
+  "description": "Automatically sorted, circular and doubly linked list",
+  "authors": [
+    "Mike Goldin <mike.goldin@consensys.net"
+  ],
+  "keywords": [
+    "ethereum",
+    "data structures"
+  ],
+  "dependencies": {
+    "dll": "1.0.0",
+    "attrstore": "1.0.0"
+  },
+  "license": "MIT"
+}
