@@ -62,8 +62,9 @@ library SDLL {
     uint[2] memory insertPoint = [currNode, nextNode];
 
     while((nextNode != 0) &&
-          (!(getAttr(_self, currNode, _self.sortAttr) <= _sortAttrVal)) &&
-          (!(_sortAttrVal <= getAttr(_self, nextNode, _self.sortAttr)))
+          ((!(getAttr(_self, currNode, _self.sortAttr) <= _sortAttrVal)) || 
+           (!(_sortAttrVal <= getAttr(_self, nextNode, _self.sortAttr)))
+          )
          ) {
       currNode = nextNode;
       nextNode = _self.dll.getNext(currNode);
