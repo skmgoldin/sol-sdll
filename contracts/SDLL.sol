@@ -47,6 +47,9 @@ library SDLL {
 
   function validatePosition(Data storage _self, uint _sortAttrVal, uint _prev, uint _next)
   public view returns (bool valid) {
+    require(_self.dll.getNext(_prev) == _next);
+    require(_self.dll.getPrev(_next) == _prev);
+
     uint prevSortAttrVal = getAttr(_self, _prev, _self.sortAttr);
     uint nextSortAttrVal = getAttr(_self, _next, _self.sortAttr);
 
