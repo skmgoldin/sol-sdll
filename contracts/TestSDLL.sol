@@ -31,4 +31,8 @@ contract TestSDLL {
   function getInsertPoint(uint _sortAttrVal) public view returns (uint[2]) {
     return sdll.getInsertPoint(_sortAttrVal);
   }
+
+	function remove(uint _node) public {
+    sdll.remove(_node);
+  }
 }
